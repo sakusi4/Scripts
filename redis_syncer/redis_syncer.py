@@ -35,11 +35,13 @@ def copy_redis_data(from_host, from_port, from_db, to_host, to_port, to_db):
             print(f'failed copy key : {key}')
 
 
-from_host = '127.0.0.1'
-from_port = 6379
-from_db = 0
-to_host = '127.0.0.1'
-to_port = 63791
-to_db = 0
+if __name__ == '__main__':
+    from_host = '127.0.0.1'
+    from_port = 6379
+    from_db = 0
 
-copy_redis_data(from_host, from_port, from_db, to_host, to_port, to_db)
+    to_host = '127.0.0.1'
+    to_port = 63791
+    to_db = 0
+
+    copy_redis_data(from_host, from_port, from_db, to_host, to_port, to_db)
